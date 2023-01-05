@@ -1,6 +1,6 @@
 public class Monkey {
-    private int x = (int) Math.random() * 100;
-    private int y = (int) Math.random() * 100;
+    public int x = (int) (Math.random() * 10);
+    public int y = (int) (Math.random() * 10);
 
     public int getX() {
         return x;
