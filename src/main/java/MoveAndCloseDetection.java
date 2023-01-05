@@ -2,7 +2,7 @@ public class MoveAndCloseDetection {
     public static int moveX(int x, int randomStart, int randomEnd) {
         boolean runX = true;
         int coordinateX = x;
-        int randomNumberX = randomStart + (int) Math.random() * randomEnd;
+        int randomNumberX = randomStart + (int) (Math.random() * randomEnd);
         coordinateX += randomNumberX;
         return coordinateX;
     }
@@ -10,7 +10,7 @@ public class MoveAndCloseDetection {
     public static int moveY(int y, int randomStart, int randomEnd) {
             boolean runY = true;
             int coordinateY = y;
-            int randomNumberY = randomStart + (int) Math.random() * randomEnd;
+            int randomNumberY = randomStart + (int) (Math.random() * randomEnd);
             coordinateY += randomNumberY;
             return coordinateY;
     }
@@ -25,7 +25,7 @@ public class MoveAndCloseDetection {
             for (int j = i + 1; j < array.length; j++) {
                 int closeIs = (int) (Math.sqrt(Math.pow(array[j].getX() - array[i].getX(), 2)
                 + Math.pow(array[j].getY() - array[i].getY(), 2)));
-                if (closeIs <= 1) {
+                if (closeIs <= 5) {
                 System.out.println("Monkeys with indexes " + i + " and " + j + " close is " + closeIs);
                 }
             }
